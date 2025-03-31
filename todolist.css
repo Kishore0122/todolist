@@ -1,33 +1,39 @@
-body{
+body {
     text-align: center;
     background-color: navajowhite;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
 }
-.container{
-position:relative;
-top: 100px;
-width: 500px;
-max-height: 1100px;
-left: 500px;
-border: 3px solid white;
-border-radius: 20px;
-padding: 20px;
-background-color: rgba(255, 255, 255, 0.807);
-box-shadow: 0px 0px 10px black;
-transition: transform 1s ease-in-out;
+
+.container {
+    position: relative;
+    top: 100px;
+    width: 500px;
+    max-height: 1100px;
+    margin: 0 auto;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.807);
+    box-shadow: 0px 0px 10px black;
+    transition: transform 0.5s ease-in-out;
 }
-.container:hover{
+
+.container:hover {
     cursor: pointer;
     transform: scale(1.03);
 }
-input{
+
+input {
     border: 2px solid black;
     padding: 15px;
     width: 80%;
     border-radius: 5px;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
 }
-.button1{
+
+.button1 {
     position: relative;
     bottom: 10px;
     border: 2px solid black;
@@ -38,31 +44,64 @@ input{
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
     background-color: aqua;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
-.button1:hover{
+
+.button1:hover {
     background-color: violet;
     box-shadow: 0px 0px 10px aqua;
 }
+
 ol {
-    position: relative;
     text-align: left;
-    padding: 10px 10px;
-    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
     font-size: 15px;
-    list-style: none; /* Removes default numbering */
-  }
-  
-  li {
+    list-style: none;
+}
+
+li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 0;
-  }
-  
-  .delete {
+}
+
+.delete {
     font-size: 10px;
     border: 2px solid black;
     cursor: pointer;
     padding: 2px 5px;
-  }
-  
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 80%;
+        max-width: 400px;
+        background-color: rgba(255, 0, 0, 0.588);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        max-width: 350px;
+        left: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+        max-width: 300px;
+        top: 50px;
+        padding: 15px;
+    }
+    input {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .button1 {
+        font-size: 14px;
+        padding: 8px 6px;
+    }
+}
